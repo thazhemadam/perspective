@@ -4,7 +4,7 @@ import { rectifyImage } from './lib/rectify'
 import { $ } from './lib/util'
 
 /**
- * Inicialização
+ * Initialization
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadInputImage(imageFile) {
     if (!isImageFile(imageFile)) {
-      return alert('⚠️ O arquivo fornecido não é uma imagem.')
+      return alert('⚠️ Please upload an image.')
     }
     fileInfo = { name: imageFile.name, type: imageFile.type }
 

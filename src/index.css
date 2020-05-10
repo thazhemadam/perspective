@@ -10,7 +10,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background-color: #445;
+  background-color: rgb(4, 4, 46);
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ body {
   position: relative;
   height: 90%;
   margin: 10px;
-  border: 1px solid #ccd;
+  border: 3px solid #ccd;
 }
 
 .canvas-container {
@@ -54,12 +54,12 @@ body {
 .button {
   z-index: 1;
   margin: 10px;
-  box-shadow: 0px 1px 3px #445;
+  box-shadow: 0px 1px 3px rgb(253, 253, 253);
   border: none;
   border-radius: 5px;
   padding: 10px;
-  background-color: #bbc;
-  color: #445;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
@@ -70,7 +70,7 @@ body {
 }
 
 .button:active {
-  background-color: #aab;
+  background-color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {
