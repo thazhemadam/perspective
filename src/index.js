@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const outputImage = new ImageViewer($('canvas#output-image'))
   const saveButton = $('#save-button')
 
-  // Carregamento da imagem de entrada
+  // Loading the input image
 
   filePicker.addEventListener('change', event => {
     const imageFile = event.target.files[0]
@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadInputImage(imageFile)
   })
 
+  //Load the image and resize it to the canvas size.
   async function loadInputImage(imageFile) {
     if (!isImageFile(imageFile)) {
       return alert('⚠️ Please upload an image.')
@@ -55,33 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
     applyButton.hidden = false
   }
 
-  // Botão "Retificar"
-
+  //Rectification
   applyButton.addEventListener('click', async () => {
     saveButton.hidden = true
     outputImage.clear()
 
-    const rectifiedImageData = await rectifyImage(
-      inputImage.getImageData(),
-      regionSelector.corners,
-      { onProgress: progress => outputImage.renderProgress(progress) }
-    )
+    //Get the rectified Image data.
+    const rectifiedImageData = await rectifyImage( inputImage.getImageData(), 
+                                                  regionSelector.corners,
+                                                  { onProgress: progress => outputImage.renderProgress(progress) }
+                                                  )
 
+    //Display the rectified image data. loadImageData is inbuilt, which takes in imageData and renders it.
     outputImage.loadImageData(rectifiedImageData)
     saveButton.hidden = false
   })
 
-  // Botão "Salvar"
+  //Save button
 
   saveButton.addEventListener('click', () => {
     saveButton.href = outputImage.canvas.toDataURL(fileInfo.type)
-    saveButton.download = addSuffix(fileInfo.name, 'retificada')
+    saveButton.download = addSuffix(fileInfo.name, '_rectified')
   })
 })
 
-/**
- * Funcões auxiliares
- */
+//Utility functions
 
 function isImageFile(file) {
   return file && /^image\//.test(file.type)

@@ -24,6 +24,7 @@ class ImageViewer extends Canvas {
     this.ctx.putImageData(imageData, 0, 0)
   }
 
+  //Bar that shows the progress of rendering the image.
   renderProgress(progress) {
     const width = 256, height = 16
     this.resize(width, height)

@@ -1,22 +1,24 @@
-/**
- * Distância Euclidiana
- */
+//Find the distance between two points
 
 export function distance([x1, y1], [x2, y2]) {
   return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2))
 }
 
-/**
- * Eliminação de Gauss-Jordan
- */
+//Gauss Jordan Eliminations on a system of equations
 
+//system is a 2-D array.
+//Each element in system depicts a row in the system of 8 linear equations.
+//Each row has 8 elements, which are representative of the coefficients of variables in each equation.
 export function gaussJordan(system) {
-  // https://en.wikipedia.org/wiki/Gaussian_elimination
 
+
+  //system.length = 8.
   for (let i = 0, len = system.length; i < len; i++) {
+
     const j = system.slice(i).findIndex(row => row[i] !== 0)
     if (j > 0) swapRows(system, i, i + j)
 
+    //divide every row with the first element in every row.
     divideRow(system[i], system[i][i])
 
     for (let j = i + 1; j < len; ++j) {
@@ -33,6 +35,7 @@ export function gaussJordan(system) {
   return system.map(row => row[row.length - 1])
 }
 
+//Utility functions
 function swapRows(matrix, i, j) {
   const temp = matrix[i]
   matrix[i] = matrix[j]
@@ -51,9 +54,7 @@ function addRow(toRow, fromRow, scale) {
   }
 }
 
-/**
- * Multiplicação matricial
- */
+//Multiplication of a matrix with a vector
 
 export function transform(matrix, vector) {
   const result = []
