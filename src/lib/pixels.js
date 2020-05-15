@@ -3,6 +3,7 @@ function getPixel(imageData, x, y) {
   return imageData.data.slice(i, i + 4)
 }
 
+//Sets each pixel in the whole image with respect to the required project coordinates ("whiteboard coordinates"), with the same transformation as applied to each corner.
 export function setPixel(imageData, x, y, rgba) {
   const i = (y * imageData.width + x) * 4
   for (let j = 0; j < 4; j++) {
@@ -10,6 +11,7 @@ export function setPixel(imageData, x, y, rgba) {
   }
 }
 
+//Performs bilinear interpolation of pixels with respect to the required projected coordinates ("whiteboard coordinates"), and returns the pixel data for the new, transformed corners.
 export function getInterpolatedPixel(imageData, x, y) {
   // https://en.wikipedia.org/wiki/Bilinear_interpolation
 
