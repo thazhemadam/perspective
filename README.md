@@ -28,4 +28,4 @@ This project was developed as a requirement for Linear Algebra related coursewor
 However, this project still has a few issues, which have been mentioned, and any PR's in reference to these are always welcome, and will be reviewed.
 
 ## Previous Work and Due Credits
-This project was initially cloned from <a href = "https://github.com/diogocampos">Diogo Campos's</a> work <a href = "https://github.com/diogocampos/rectify">Rectify</a>, and continues to be significantly based on the application developed by said individual as well. 
+This project was initially developed with <a href = "https://github.com/diogocampos">Diogo Campos's</a> work <a href = "https://github.com/diogocampos/rectify">Rectify</a> as a primary resource for reference and inspiration, and continues to be significantly based on the application developed by said individual as well. 
