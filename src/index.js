@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   saveButton.addEventListener('click', () => {
     saveButton.href = outputImage.canvas.toDataURL(fileInfo.type)
-    saveButton.download = addSuffix(fileInfo.name, '_rectified')
+    saveButton.download = addSuffix(fileInfo.name, 'rectified')
   })
 })
 
