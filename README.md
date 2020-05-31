@@ -10,6 +10,18 @@ After uploading the image, choose the four boundary points with respect to which
 
 Once perspective rectification is completed, click on **Save** to save the image onto the machine. The image will be saved as _imagename-rectified.imageextension_ 
 
+## Working with the source code
+* To install all dependencies, run `npm install`.
+
+* To start a development server that automatically recompiles the source code each time any changes are made to a file, run  `npm start`.
+
+* To compile and build the directory that is to be served up, run `npm run build`.
+  
+* To publish the directory onto GitHub pages, run `npm run deploy`.
+
+*  To remove the directory created after running `npm run build`, run `npm run clean`.
+
+
 ## Further Support
 This project was developed as a requirement for Linear Algebra related coursework, and aims to only provide basic perspective rectification functions. Since these criteria have been met, I will no longer be updating this project.
 
