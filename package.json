@@ -1,5 +1,5 @@
 {
-  "name": "rectify",
+  "name": "perspective",
   "private": true,
   "scripts": {
     "start": "parcel src/index.html --no-autoinstall --open",
