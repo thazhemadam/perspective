@@ -21,9 +21,12 @@ Once perspective rectification is completed, click on **Save** to save the image
 
 *  To remove the directory created after running `npm run build`, run `npm run clean`.
 
+## Documentation
+Detailed documentation can be found [here](perspective.pdf).
+
 
 ## Further Support
-This project was developed as a requirement for Linear Algebra related coursework, and aims to only provide basic perspective rectification functions. Since these criteria have been met, I will no longer be updating this project.
+This project aims to only provide basic perspective rectification functions. Since this criteria has been met, I will no longer be updating this project.
 
 However, this project still has a few issues, which have been mentioned, and any PR's in reference to these are always welcome, and will be reviewed.
 
