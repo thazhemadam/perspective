@@ -22,7 +22,7 @@ Once perspective rectification is completed, click on **Save** to save the image
 *  To remove the directory created after running `npm run build`, run `npm run clean`.
 
 ## Documentation
-Detailed documentation can be found [here](perspective.pdf).
+Detailed documentation, and explanation of underlying principles can be found [here](perspective.pdf).
 
 
 ## Further Support
